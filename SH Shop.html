@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAKIB Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #products, #cart {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 5px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SHAKIB Clothing Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product" data-id="1" data-price="25">
+            <img src="c:\Users\shaki\Desktop\New folder (2)\Camera\20220420_113953.jpg" alt="Shirt">
+            <h3>Stylish Shirt</h3>
+            <p>$25.00</p>
+            <button onclick="addToCart(1, 'Stylish Shirt', 25)">Add to Cart</button>
+        </div>
+        <!-- Add more products similarly -->
+    </section>
+    
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<div class="product" data-id="2" data-price="30">
+    <img src="images/pants.jpg" alt="Stylish Pants">
+    <h3>Stylish Pants</h3>
+    <p>$30.00</p>
+    <button onclick="addToCart(2, 'Stylish Pants', 30)">Add to Cart</button>
+</div>
